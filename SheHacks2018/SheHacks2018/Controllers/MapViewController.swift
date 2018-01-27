@@ -38,7 +38,11 @@ extension MapViewController {
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-            print(" this is the location: \(location)")
+            let span = MKCoordinateSpanMake(0.05, 0.05)
+            
+            // define a map region = map center (location[0] coord) + zoom level (arbitrary span)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
         }
     }
     
