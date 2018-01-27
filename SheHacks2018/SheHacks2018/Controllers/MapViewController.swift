@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-import MapKit
+import MapKit //APple-provided native map API, no mo' 3rd party SDKs
 import CoreLocation
 
 
@@ -16,15 +16,39 @@ import CoreLocation
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     let  locationManager = CLLocationManager()
-    
     @IBOutlet weak var mapView: MKMapView!
-    override func viewDidLoad() {
+    
+    @objc func addAnnotationOnLongPress(_ gesture:UILongPressGestureRecognizer)
+    {
+        if gesture.state == .ended {
+            let point = gesture.location(in: self.mapView)
+            let coordinate = self.mapView.convert(point, toCoordinateFrom: self.mapView)
+            print("the coordinate is.....*drum roll*...\(coordinate)")
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coordinate
+            annotation.title = "Title"
+            annotation.subtitle = "Subtitle"
+            self.mapView.addAnnotation(annotation)
+        }
+    } // action function end
+    
+    
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        locationManager.requestLocation()
+        
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(_:)))
+        
+        longPressGesture.minimumPressDuration = 1.0
+        
+        self.mapView.addGestureRecognizer(longPressGesture)
     }
 
 }
