@@ -46,27 +46,24 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 6 // make button rounded
-        
-        // TO DO if user exists, skip to mainButtonVC NOT createUsernameVC
-        
     }
  
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        guard let identifier = segue.identifier else {return }
-        
-        if identifier == "toCreateUsername" && Auth.auth().currentUser == nil{
-            print("Transitioning to create username VC")
-        }
-        else if identifier == "toButtonsForExistingUser" { // intended for existing users
-            print("Transitioning to buttons because this is the current user")
-        }
-        else {
-            print("wtf just happened figure it out")
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        guard let identifier = segue.identifier else {return }
+//
+//        if identifier == "toCreateUsername" && Auth.auth().currentUser == nil{
+//            print("Transitioning to create username VC")
+//        }
+//        else if identifier == "toButtonsForExistingUser" { // intended for existing users
+//            print("Transitioning to buttons because this is the current user")
+//        }
+//        else {
+//            print("wtf just happened figure it out")
+//
+//        }
+//    }
 
 }
 
