@@ -19,7 +19,11 @@ class LoginViewController: UIViewController {
         print("login butotn tapped")
         let user = Auth.auth().currentUser
         // if user exists
-        if user != nil { print("Yay user already is here") }
+        if user != nil
+        {
+            performSegue(withIdentifier: "toButtonsForExistingUser", sender: self.loginButton)
+            print("Yay user already is here")
+        }
         else { // sign them in
             Auth.auth().signInAnonymously()
                 {
@@ -29,8 +33,10 @@ class LoginViewController: UIViewController {
                         print("Oh no!!! Error with anon authentication")
                         return
                     }
+                    
             print("Yay user #\(user!.uid) signed in anonymously!!!")
             } // end of closure
+            performSegue(withIdentifier: "toCreateUsername", sender: self.loginButton)
             return
         } // end of guard
     } //end of func
@@ -42,6 +48,7 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 6 // make button rounded
         
         // TO DO if user exists, skip to mainButtonVC NOT createUsernameVC
+        
     }
  
     
@@ -49,8 +56,15 @@ class LoginViewController: UIViewController {
         
         guard let identifier = segue.identifier else {return }
         
-        if identifier == "toCreateUsername" {
+        if identifier == "toCreateUsername" && Auth.auth().currentUser == nil{
             print("Transitioning to create username VC")
+        }
+        else if identifier == "toButtonsForExistingUser" { // intended for existing users
+            print("Transitioning to buttons because this is the current user")
+        }
+        else {
+            print("wtf just happened figure it out")
+            
         }
     }
 

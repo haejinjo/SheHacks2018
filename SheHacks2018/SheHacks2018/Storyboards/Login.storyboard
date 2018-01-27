@@ -58,7 +58,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="oU4-MU-vd3" eventType="touchUpInside" id="E8k-GP-tYA"/>
-                                    <segue destination="6Vq-E7-N29" kind="show" identifier="toCreateUsername" id="UTH-8o-whm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="you can always transition into a saved account if you decide to stay with us!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGx-h8-7Gr">
@@ -74,6 +73,8 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="ayV-1o-UYQ" id="4tE-GM-4ru"/>
+                        <segue destination="6Vq-E7-N29" kind="presentation" identifier="toCreateUsername" id="29o-AY-3hc"/>
+                        <segue destination="8yT-ai-IWq" kind="presentation" identifier="toButtonsForExistingUser" id="xpP-Zl-zvu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFO-VK-GKH" sceneMemberID="firstResponder"/>
@@ -116,6 +117,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6SA-WC-oVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1061.5999999999999" y="131.78410794602701"/>
+        </scene>
+        <!--mainButtonsViewController-->
+        <scene sceneID="ybf-Wm-N4I">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="mainButtonsViewController" storyboardName="Main" referencedIdentifier="mainButtonsViewController" id="8yT-ai-IWq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7u-kA-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="674"/>
         </scene>
     </scenes>
 </document>
