@@ -13,6 +13,9 @@
 		00D94E4C201C4C2C00F11CED /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E4B201C4C2C00F11CED /* MapViewController.swift */; };
 		00D94E4F201C7BDD00F11CED /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E4E201C7BDD00F11CED /* UserService.swift */; };
 		00D94E51201C7BFB00F11CED /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E50201C7BFA00F11CED /* PlaceService.swift */; };
+		00D94E53201D002400F11CED /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E52201D002400F11CED /* InputViewController.swift */; };
+		00D94E55201D01D000F11CED /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E54201D01D000F11CED /* CommentService.swift */; };
+		00D94E57201D01E600F11CED /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E56201D01E600F11CED /* Comment.swift */; };
 		00EB1266201C3BFB00390B51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00EB1265201C3BFA00390B51 /* GoogleService-Info.plist */; };
 		00EB126D201C498500390B51 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00EB126C201C498500390B51 /* Login.storyboard */; };
 		0E4120CC276226A79BEB373F /* Pods_SheHacks2018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09B4E93CB9CDDA431D75B6F /* Pods_SheHacks2018Tests.framework */; };
@@ -54,6 +57,9 @@
 		00D94E4B201C4C2C00F11CED /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		00D94E4E201C7BDD00F11CED /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		00D94E50201C7BFA00F11CED /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		00D94E52201D002400F11CED /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		00D94E54201D01D000F11CED /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		00D94E56201D01E600F11CED /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		00EB1265201C3BFA00390B51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00EB126C201C498500390B51 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		137654A2114EFA36FF52A810 /* Pods-SheHacks2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheHacks2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-SheHacks2018/Pods-SheHacks2018.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			children = (
 				00D94E4E201C7BDD00F11CED /* UserService.swift */,
 				00D94E50201C7BFA00F11CED /* PlaceService.swift */,
+				00D94E54201D01D000F11CED /* CommentService.swift */,
 			);
 			name = Services;
 			path = SheHacks2018/Services;
@@ -205,6 +212,7 @@
 				00D94E47201C4B9000F11CED /* CreateUsernameViewController.swift */,
 				00D94E49201C4C1F00F11CED /* MainButtonsViewController.swift */,
 				00D94E4B201C4C2C00F11CED /* MapViewController.swift */,
+				00D94E52201D002400F11CED /* InputViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 			children = (
 				84CAAD5F201C2F70004DA05F /* User.swift */,
 				84CAAD61201C3056004DA05F /* Place.swift */,
+				00D94E56201D01E600F11CED /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,9 +410,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SheHacks2018/Pods-SheHacks2018-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -541,12 +555,15 @@
 				00D94E46201C4B8400F11CED /* LoginViewController.swift in Sources */,
 				84CAAD60201C2F70004DA05F /* User.swift in Sources */,
 				84CAAD2D201BAF98004DA05F /* ViewController.swift in Sources */,
+				00D94E57201D01E600F11CED /* Comment.swift in Sources */,
+				00D94E53201D002400F11CED /* InputViewController.swift in Sources */,
 				84CAAD33201BAF98004DA05F /* SheHacks2018.xcdatamodeld in Sources */,
 				00D94E4C201C4C2C00F11CED /* MapViewController.swift in Sources */,
 				84CAAD2B201BAF98004DA05F /* AppDelegate.swift in Sources */,
 				00D94E4F201C7BDD00F11CED /* UserService.swift in Sources */,
 				00D94E51201C7BFB00F11CED /* PlaceService.swift in Sources */,
 				00D94E4A201C4C1F00F11CED /* MainButtonsViewController.swift in Sources */,
+				00D94E55201D01D000F11CED /* CommentService.swift in Sources */,
 				84CAAD62201C3056004DA05F /* Place.swift in Sources */,
 				00D94E48201C4B9000F11CED /* CreateUsernameViewController.swift in Sources */,
 			);
