@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A338C9201D1288006B33F1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A338C8201D1288006B33F1 /* CoreLocation.framework */; };
 		00D94E46201C4B8400F11CED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E45201C4B8400F11CED /* LoginViewController.swift */; };
 		00D94E48201C4B9000F11CED /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E47201C4B9000F11CED /* CreateUsernameViewController.swift */; };
 		00D94E4A201C4C1F00F11CED /* MainButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E49201C4C1F00F11CED /* MainButtonsViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A338C8201D1288006B33F1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		00D94E45201C4B8400F11CED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		00D94E47201C4B9000F11CED /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		00D94E49201C4C1F00F11CED /* MainButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonsViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00A338C9201D1288006B33F1 /* CoreLocation.framework in Frameworks */,
 				B80D3ACB1AF469262EF1F164 /* Pods_SheHacks2018.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +143,7 @@
 		7A2EB4C7A006795980009ABE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00A338C8201D1288006B33F1 /* CoreLocation.framework */,
 				41FA87AE21106B88A1427549 /* Pods_SheHacks2018.framework */,
 				E09B4E93CB9CDDA431D75B6F /* Pods_SheHacks2018Tests.framework */,
 				70AC3F2BB1C5FA4D8F5E7E05 /* Pods_SheHacks2018UITests.framework */,

@@ -111,7 +111,23 @@
                     <view key="view" contentMode="scaleToFill" id="lyu-BI-cvi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXU-TM-Uwy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BAr-Gz-k4V" id="Qh9-yY-iEL"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zXU-TM-Uwy" firstAttribute="top" secondItem="i7V-qh-CPl" secondAttribute="top" id="6Aw-sp-jUz"/>
+                            <constraint firstItem="zXU-TM-Uwy" firstAttribute="leading" secondItem="i7V-qh-CPl" secondAttribute="leading" id="Dje-9j-a0y"/>
+                            <constraint firstItem="i7V-qh-CPl" firstAttribute="trailing" secondItem="zXU-TM-Uwy" secondAttribute="trailing" id="Jtp-lC-upW"/>
+                            <constraint firstItem="i7V-qh-CPl" firstAttribute="bottom" secondItem="zXU-TM-Uwy" secondAttribute="bottom" id="Rgj-5c-JLs"/>
+                            <constraint firstItem="i7V-qh-CPl" firstAttribute="bottom" secondItem="zXU-TM-Uwy" secondAttribute="bottom" id="bwa-vf-9ar"/>
+                            <constraint firstItem="zXU-TM-Uwy" firstAttribute="top" secondItem="i7V-qh-CPl" secondAttribute="top" id="zGQ-uB-ucL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="i7V-qh-CPl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Quiet Places" id="K7C-fm-XQJ">
@@ -121,6 +137,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="zXU-TM-Uwy" id="F0u-1h-l9W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qd9-9D-1io" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5OZ-eb-NnU" userLabel="Exit" sceneMemberID="exit"/>
