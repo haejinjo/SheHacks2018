@@ -11,6 +11,9 @@ import Foundation
 import MapKit //APple-provided native map API, no mo' 3rd party SDKs
 import CoreLocation
 
+// you need to share your location with us if you want to...
+// 1) quickly find sanctuary near you when you're in distress
+// 2) be able to share your thoughts at the places you are to when you find peace
 
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
@@ -18,19 +21,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     let  locationManager = CLLocationManager()
     @IBOutlet weak var mapView: MKMapView!
     
-    @objc func addAnnotationOnLongPress(_ gesture:UILongPressGestureRecognizer)
-    {
-        if gesture.state == .ended {
-            let point = gesture.location(in: self.mapView)
-            let coordinate = self.mapView.convert(point, toCoordinateFrom: self.mapView)
-            print("the coordinate is.....*drum roll*...\(coordinate)")
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = coordinate
-            annotation.title = "Title"
-            annotation.subtitle = "Subtitle"
-            self.mapView.addAnnotation(annotation)
-        }
-    } // action function end
+//    @objc func addAnnotationOnLongPress(_ gesture:UILongPressGestureRecognizer)
+//    {
+//        if gesture.state == .ended {
+//            let point = gesture.location(in: self.mapView)
+//            let coordinate = self.mapView.convert(point, toCoordinateFrom: self.mapView)
+//            print("the coordinate is.....*drum roll*...\(coordinate)")
+//            let annotation = MKPointAnnotation()
+//            annotation.coordinate = coordinate
+//            annotation.title = "Title"
+//            annotation.subtitle = "Subtitle"
+//            self.mapView.addAnnotation(annotation)
+//        }
+//    } // action function end
     
     
     
@@ -44,11 +47,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
         
         
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(_:)))
-        
-        longPressGesture.minimumPressDuration = 1.0
-        
-        self.mapView.addGestureRecognizer(longPressGesture)
+//        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationOnLongPress(_:)))
+//
+//        longPressGesture.minimumPressDuration = 1.0
+//
+//        self.mapView.addGestureRecognizer(longPressGesture)
     }
 
 }
@@ -60,6 +63,7 @@ extension MapViewController {
             locationManager.requestLocation()
         }
     }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             let span = MKCoordinateSpanMake(0.05, 0.05)

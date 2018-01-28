@@ -96,13 +96,42 @@
                     <view key="view" contentMode="scaleToFill" id="ncH-Vg-FLf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="leave a note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGh-tY-aBs">
+                                <rect key="frame" x="135" y="37" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Share your story...even a word" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xky-lM-AQa">
+                                <rect key="frame" x="60" y="66" width="264" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPI-aa-AnG">
+                                <rect key="frame" x="163" y="296" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitNoteButtonTapped:" destination="hf0-eW-6EJ" eventType="touchUpInside" id="WoA-aD-ggV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gdr-MS-eap"/>
                     </view>
+                    <connections>
+                        <outlet property="submitNoteButton" destination="ZPI-aa-AnG" id="RCd-Kc-8vA"/>
+                        <segue destination="bzO-eg-LFf" kind="unwind" identifier="noteTextFieldPrimaryActionTriggered" unwindAction="unwindToMainButtonsViewControllerWithSegue:" id="1hC-g3-TNh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmZ-C7-9Qw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bzO-eg-LFf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1231" y="853"/>
+            <point key="canvasLocation" x="1229.5999999999999" y="852.3238380809596"/>
         </scene>
         <!--Quiet Places-->
         <scene sceneID="Yux-5b-F0x">

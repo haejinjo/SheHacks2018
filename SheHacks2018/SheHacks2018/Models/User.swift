@@ -26,8 +26,12 @@ class User {
 //        _current = user
 //    }
     
-    init (uid: String, username: String) {
-        self.uid = uid;
+    init (uid: String?, username: String) {
+        if let user = uid {
+            self.uid = user
+        } else {
+            self.uid = ""
+        }
         self.username = username;
     }
     

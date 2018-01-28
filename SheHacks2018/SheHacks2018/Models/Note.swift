@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class Note {
+    
+    let content:String = ""
+    
+    
+}

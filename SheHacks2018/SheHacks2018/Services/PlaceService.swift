@@ -10,4 +10,7 @@ import Foundation
 
 struct PlaceService {
     
+    static func create() {
+        
+    }
 }
