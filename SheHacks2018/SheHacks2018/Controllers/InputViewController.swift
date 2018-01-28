@@ -8,11 +8,45 @@
 
 import Foundation
 import UIKit
+import MapKit
+import CoreLocation
 
-class InputViewController: UIViewController {
+protocol currLocationKeeper: class {
+    var submittedNoteHere: CLLocationCoordinate2D? { get set }
+}
+
+
+class InputViewController: UIViewController, CLLocationManagerDelegate, currLocationKeeper {
+    var submittedNoteHere: CLLocationCoordinate2D?
+
+    @IBOutlet weak var noteTextField: UITextView!
     @IBOutlet weak var submitNoteButton: UIButton!
     @IBAction func submitNoteButtonTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "noteTextFieldPrimaryActionTriggered", sender: self.submitNoteButton)
+        print("HEY! coordinates here are......\(String(describing: submittedNoteHere))")
+        coordinates.append(submittedNoteHere)
+     
+        
+    }
+    
+    @IBAction func dismissButtonTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "noteTextFieldPrimaryActionTriggered", sender: self.dismissButton)
+    }
+    @IBOutlet weak var dismissButton: UIButton!
+//    let bottom = NSMakeRange(noteTextField.text.count-1, 1)
+//    self.noteTextField.scrollRangeToVisible(bottom)
+//
+//
+    let locationManager = CLLocationManager()
+    
+    override func viewDidLoad() {
+       super.viewDidLoad()
+        noteTextField.becomeFirstResponder()
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
     }
     
     @IBAction func noteTextFieldPrimaryActionTriggered(_ sender: Any) {
@@ -22,4 +56,10 @@ class InputViewController: UIViewController {
         self.present(initialViewController, animated: true, completion: nil)
     }
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        submittedNoteHere =  (manager.location?.coordinate)!
+        coordinates.append(submittedNoteHere!)
+    }
+
 }
+

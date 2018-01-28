@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0072FA6B201DCF0900A7822B /* customCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0072FA6A201DCF0900A7822B /* customCalloutView.swift */; };
 		00A338C9201D1288006B33F1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A338C8201D1288006B33F1 /* CoreLocation.framework */; };
 		00D94E46201C4B8400F11CED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E45201C4B8400F11CED /* LoginViewController.swift */; };
 		00D94E48201C4B9000F11CED /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E47201C4B9000F11CED /* CreateUsernameViewController.swift */; };
 		00D94E4A201C4C1F00F11CED /* MainButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E49201C4C1F00F11CED /* MainButtonsViewController.swift */; };
 		00D94E4C201C4C2C00F11CED /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E4B201C4C2C00F11CED /* MapViewController.swift */; };
-		00D94E4F201C7BDD00F11CED /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E4E201C7BDD00F11CED /* UserService.swift */; };
-		00D94E51201C7BFB00F11CED /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E50201C7BFA00F11CED /* PlaceService.swift */; };
+		00D94E51201C7BFB00F11CED /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E50201C7BFA00F11CED /* LocationService.swift */; };
 		00D94E53201D002400F11CED /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E52201D002400F11CED /* InputViewController.swift */; };
-		00D94E55201D01D000F11CED /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E54201D01D000F11CED /* CommentService.swift */; };
+		00D94E55201D01D000F11CED /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E54201D01D000F11CED /* NoteService.swift */; };
 		00D94E57201D01E600F11CED /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D94E56201D01E600F11CED /* Note.swift */; };
 		00EB1266201C3BFB00390B51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00EB1265201C3BFA00390B51 /* GoogleService-Info.plist */; };
 		00EB126D201C498500390B51 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00EB126C201C498500390B51 /* Login.storyboard */; };
@@ -29,7 +29,6 @@
 		84CAAD38201BAF98004DA05F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CAAD36201BAF98004DA05F /* LaunchScreen.storyboard */; };
 		84CAAD43201BAF98004DA05F /* SheHacks2018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAD42201BAF98004DA05F /* SheHacks2018Tests.swift */; };
 		84CAAD4E201BAF98004DA05F /* SheHacks2018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAD4D201BAF98004DA05F /* SheHacks2018UITests.swift */; };
-		84CAAD60201C2F70004DA05F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAD5F201C2F70004DA05F /* User.swift */; };
 		84CAAD62201C3056004DA05F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAD61201C3056004DA05F /* Location.swift */; };
 		B80D3ACB1AF469262EF1F164 /* Pods_SheHacks2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FA87AE21106B88A1427549 /* Pods_SheHacks2018.framework */; };
 /* End PBXBuildFile section */
@@ -52,15 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0072FA6A201DCF0900A7822B /* customCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCalloutView.swift; sourceTree = "<group>"; };
 		00A338C8201D1288006B33F1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		00D94E45201C4B8400F11CED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		00D94E47201C4B9000F11CED /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		00D94E49201C4C1F00F11CED /* MainButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButtonsViewController.swift; sourceTree = "<group>"; };
 		00D94E4B201C4C2C00F11CED /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		00D94E4E201C7BDD00F11CED /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		00D94E50201C7BFA00F11CED /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		00D94E50201C7BFA00F11CED /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		00D94E52201D002400F11CED /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
-		00D94E54201D01D000F11CED /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		00D94E54201D01D000F11CED /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 		00D94E56201D01E600F11CED /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		00EB1265201C3BFA00390B51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00EB126C201C498500390B51 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -85,7 +84,6 @@
 		84CAAD49201BAF98004DA05F /* SheHacks2018UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheHacks2018UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CAAD4D201BAF98004DA05F /* SheHacks2018UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheHacks2018UITests.swift; sourceTree = "<group>"; };
 		84CAAD4F201BAF99004DA05F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84CAAD5F201C2F70004DA05F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84CAAD61201C3056004DA05F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E09B4E93CB9CDDA431D75B6F /* Pods_SheHacks2018Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SheHacks2018Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79EDA25B3F80DAF7B0DE5D9 /* Pods-SheHacks2018Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheHacks2018Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SheHacks2018Tests/Pods-SheHacks2018Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,9 +121,8 @@
 		00D94E4D201C79FF00F11CED /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				00D94E4E201C7BDD00F11CED /* UserService.swift */,
-				00D94E50201C7BFA00F11CED /* PlaceService.swift */,
-				00D94E54201D01D000F11CED /* CommentService.swift */,
+				00D94E50201C7BFA00F11CED /* LocationService.swift */,
+				00D94E54201D01D000F11CED /* NoteService.swift */,
 			);
 			name = Services;
 			path = SheHacks2018/Services;
@@ -176,6 +173,7 @@
 		84CAAD29201BAF98004DA05F /* SheHacks2018 */ = {
 			isa = PBXGroup;
 			children = (
+				00D94E4D201C79FF00F11CED /* Services */,
 				84CAAD5E201BB5E6004DA05F /* Views */,
 				84CAAD5D201BB5DF004DA05F /* Models */,
 				84CAAD5C201BB5CD004DA05F /* Controllers */,
@@ -224,7 +222,6 @@
 		84CAAD5D201BB5DF004DA05F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				84CAAD5F201C2F70004DA05F /* User.swift */,
 				84CAAD61201C3056004DA05F /* Location.swift */,
 				00D94E56201D01E600F11CED /* Note.swift */,
 			);
@@ -234,7 +231,7 @@
 		84CAAD5E201BB5E6004DA05F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				00D94E4D201C79FF00F11CED /* Services */,
+				0072FA6A201DCF0900A7822B /* customCalloutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -556,18 +553,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0072FA6B201DCF0900A7822B /* customCalloutView.swift in Sources */,
 				00D94E46201C4B8400F11CED /* LoginViewController.swift in Sources */,
-				84CAAD60201C2F70004DA05F /* User.swift in Sources */,
 				84CAAD2D201BAF98004DA05F /* ViewController.swift in Sources */,
 				00D94E57201D01E600F11CED /* Note.swift in Sources */,
 				00D94E53201D002400F11CED /* InputViewController.swift in Sources */,
 				84CAAD33201BAF98004DA05F /* SheHacks2018.xcdatamodeld in Sources */,
 				00D94E4C201C4C2C00F11CED /* MapViewController.swift in Sources */,
 				84CAAD2B201BAF98004DA05F /* AppDelegate.swift in Sources */,
-				00D94E4F201C7BDD00F11CED /* UserService.swift in Sources */,
-				00D94E51201C7BFB00F11CED /* PlaceService.swift in Sources */,
+				00D94E51201C7BFB00F11CED /* LocationService.swift in Sources */,
 				00D94E4A201C4C1F00F11CED /* MainButtonsViewController.swift in Sources */,
-				00D94E55201D01D000F11CED /* CommentService.swift in Sources */,
+				00D94E55201D01D000F11CED /* NoteService.swift in Sources */,
 				84CAAD62201C3056004DA05F /* Location.swift in Sources */,
 				00D94E48201C4B9000F11CED /* CreateUsernameViewController.swift in Sources */,
 			);

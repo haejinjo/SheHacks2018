@@ -104,13 +104,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Share your story...even a word" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xky-lM-AQa">
-                                <rect key="frame" x="60" y="66" width="264" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPI-aa-AnG">
                                 <rect key="frame" x="163" y="296" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -119,11 +112,31 @@
                                     <action selector="submitNoteButtonTapped:" destination="hf0-eW-6EJ" eventType="touchUpInside" id="WoA-aD-ggV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSZ-fS-Iax">
+                                <rect key="frame" x="310" y="41" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="hf0-eW-6EJ" eventType="touchUpInside" id="D3U-eq-aEw"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xky-lM-AQa">
+                                <rect key="frame" x="55" y="66" width="264" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gdr-MS-eap"/>
                     </view>
                     <connections>
+                        <outlet property="dismissButton" destination="BSZ-fS-Iax" id="AC9-Ea-tc9"/>
+                        <outlet property="noteTextField" destination="Xky-lM-AQa" id="sjQ-KN-j4d"/>
                         <outlet property="submitNoteButton" destination="ZPI-aa-AnG" id="RCd-Kc-8vA"/>
                         <segue destination="bzO-eg-LFf" kind="unwind" identifier="noteTextFieldPrimaryActionTriggered" unwindAction="unwindToMainButtonsViewControllerWithSegue:" id="1hC-g3-TNh"/>
                     </connections>
@@ -178,6 +191,7 @@
         <!--Navigation Controller-->
         <scene sceneID="825-pl-54u">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EAD-7X-2ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zKB-U8-LvE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eah-8y-Nxy">
@@ -189,7 +203,6 @@
                         <segue destination="BAr-Gz-k4V" kind="relationship" relationship="rootViewController" id="jBg-xg-3uv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EAD-7X-2ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="974.39999999999998" y="-467.76611694152928"/>
         </scene>
